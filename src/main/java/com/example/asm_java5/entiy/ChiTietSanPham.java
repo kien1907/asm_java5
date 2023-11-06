@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.UUID;
 
@@ -15,7 +16,7 @@ import java.util.UUID;
 @Table(name = "chi_tiet_sp")
 @ToString
 @Builder
-public class ChiTietSanPham {
+public class ChiTietSanPham implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID Id;

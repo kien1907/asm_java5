@@ -28,8 +28,8 @@ public class KhachHang {
     private String tenDem;
     @NotBlank(message = "Không được để trống")
     private String ho;
-    @NotBlank(message = "Không được để trống")
-    private String ngaySinh;
+    @Temporal(TemporalType.DATE)
+    private Date ngaySinh;
     @NotBlank(message = "Không được để trống")
     @Size(max = 10,min = 10,message = "Số điện chỉ có 10 số")
     private String sdt;

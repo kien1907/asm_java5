@@ -1,12 +1,13 @@
 package com.example.asm_java5.entiy;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.sql.Date;
+import java.util.Date;
 import java.util.UUID;
 
 @Getter@Setter
@@ -17,13 +18,20 @@ public class NhanVien {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
     private String ma;
+    @NotBlank(message = "Không được bỏ trống")
     private String ten;
+    @NotBlank(message = "Không được bỏ trống")
     private String tenDem;
+    @NotBlank(message = "Không được bỏ trống")
     private String ho;
     private String gioiTinh;
+    @Temporal(TemporalType.DATE)
     private Date ngaySinh;
+    @NotBlank(message = "Không được bỏ trống")
     private String diaChi;
+    @NotBlank(message = "Không được bỏ trống")
     private String sdt;
+    @NotBlank(message = "Không được bỏ trống")
     private String matKhau;
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_ch")
@@ -31,4 +39,5 @@ public class NhanVien {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_cv")
     private ChucVu chucVu;
+    private int trangThai;
 }

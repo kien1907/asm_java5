@@ -66,27 +66,53 @@
 </head>
 <body>
 <div>
-    <jsp:include page="${login}"/>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="nav nav-underline">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/quan-ly/san-pham/hien-thi">Sản Phẩm</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Nhân Viên</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                    </li>
-                </ul>
+            <div class="collapse navbar-collapse row" id="navbarNav">
+                <div class="col-10">
+                    <ul class="nav nav-underline">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/san-pham-ct/hien-thi">Sản Phẩm CT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/sanpham/hien-thi">Sản Phẩm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/nsx/hien-thi">NSX</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/dong/hien-thi">Dòng</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/mau-sac/hien-thi">Màu Sắc</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/nhan-vien/hien-thi">Nhân Viên</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/cua-hang/hien-thi">Cửa Hàng</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/chuc-vu/hien-thi">Chức Vụ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/khach-hang/hien-thi">Khách hàng</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/gio-hang/hien-thi">Giỏ hàng</a>
+                        </li>
+                    </ul>
+                </div>
+<%--                <div class="col-2" style="text-align: center">--%>
+<%--                    <p>${userName}</p>--%>
+<%--                    <a href="/logout/${ma}">Logout</a>--%>
+<%--                </div>--%>
             </div>
         </div>
     </nav>
 </div>
 <div class="container wrappaercontaier">
-    <jsp:include page="${page}"/>
+    <jsp:include page="${component}"/>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
